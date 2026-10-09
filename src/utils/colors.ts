@@ -1,0 +1,18 @@
+export const demoColors = [
+  "red",
+  "orange",
+  "gold",
+  "yellow",
+  "yellowgreen",
+  "limegreen",
+  "green",
+  "aquamarine ",
+  "cyan",
+  "lightcyan",
+  "lightblue",
+  "blue",
+  "blueviolet",
+  "magenta",
+  "purple",
+  "gray",
+];
