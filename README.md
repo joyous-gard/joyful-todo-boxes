@@ -8,7 +8,7 @@
 npm install joyful-todo-boxes
 ```
 
-The package exports `JoyfulCheckBox` and its TypeScript declarations from the package entry point.
+The package exports `JoyfulCheckBox`, `JoyfulProgBox`, and their TypeScript declarations from the package entry point.
 
 ## Usage
 
@@ -27,6 +27,31 @@ function TaskCheckbox() {
 ```
 
 The component keeps its own status after it mounts. The `status` prop sets the initial status; clicking toggles between `"to-do"` and `"done"` and calls `onTicked` with the new status. `"in-progress"` is also available as an initial status.
+
+### JoyfulProgBox
+
+`JoyfulProgBox` cycles through the three task statuses when clicked: `"to-do"` → `"in-progress"` → `"done"` → `"to-do"`. The `status` prop sets its initial status, and `onTicked` is called with the next status after each click.
+
+```tsx
+import { JoyfulProgBox } from "joyful-todo-boxes";
+
+function TaskProgress() {
+  return (
+    <JoyfulProgBox
+      status="to-do"
+      shape="roundedSquare"
+      tickStyle="gernand"
+      onTicked={(status) => console.log("Task status:", status)}
+    />
+  );
+}
+```
+
+`JoyfulProgBox` supports the same `size`, `status`, `shape`, `borderColor`, `fillColor`, `tickColor`, and `onTicked` props described below, with the same defaults. Its additional `tickStyle` prop selects how progress and completion are drawn:
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `tickStyle` | `"gernand"` or `"strikesAndSpares"` | `"gernand"` | Visual style for the progress and done marks. |
 
 ## Props
 
