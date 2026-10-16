@@ -1,5 +1,6 @@
 import "../App.css";
 import JoyfulCheckBoxTestView from "./component-test-views/JoyfulCheckBoxTestView";
+import JoyfulProgBoxTestView from "./component-test-views/JoyfulProgBoxTestView";
 
 export default function UIComponentTestPage() {
   return (
@@ -11,6 +12,7 @@ export default function UIComponentTestPage() {
         {/* <JoyfulTaskTestView /> */}
         <JoyfulCheckBoxTestView />
         {/* <JoyfulProgBoxTestView /> */}
+        <JoyfulProgBoxTestView />
       </div>
     </>
   );
